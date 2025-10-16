@@ -1,0 +1,8 @@
+
+{
+  "name": "PRVAIL ",
+  "description": "PRVAIL: An enterprise-grade communications intelligence platform providing real-time monitoring, narrative analysis, and strategic planning. Powered by Google Cloud Platform",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
