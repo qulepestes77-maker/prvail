@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useAuth } from '../../context/AuthContext';
@@ -15,7 +16,11 @@ const GeneratorPage = () => {
   }, [user, loading, router]);
 
   if (loading || !user) {
-    return <p className="text-center p-8">Loading...</p>;
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <p className="text-lg">Loading...</p>
+      </div>
+    );
   }
 
   return (

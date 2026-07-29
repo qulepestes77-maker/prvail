@@ -6,22 +6,21 @@
   idx.extensions = [
     "svelte.svelte-vscode"
     "vue.volar"
+    "baran-wang.vscode-theme-jetbrains-new-ui"
   ];
   idx.previews = {
-    previews = {
-      web = {
-        command = [
-          "npm"
-          "run"
-          "dev"
-          "--"
-          "--port"
-          "$PORT"
-          "-H"
-          "0.0.0.0"
-        ];
-        manager = "web";
-      };
+    web = {
+      command = [
+        "npm"
+        "run"
+        "dev"
+        "--"
+        "--port"
+        "$PORT"
+        "-H"
+        "0.0.0.0"
+      ];
+      manager = "web";
     };
   };
 }

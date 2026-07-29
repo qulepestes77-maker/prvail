@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useNotification } from '../context/NotificationContext';
@@ -54,15 +55,15 @@ const AI_Interaction = () => {
   };
 
   return (
-    <div className="bg-brand-med border border-brand-light rounded-lg p-8">
-      <h1 className="text-3xl font-bold text-brand-text mb-6">AI Generator</h1>
+    <div className="bg-gray-800 border border-gray-700 rounded-lg p-8">
+      <h1 className="text-3xl font-bold text-white mb-6">AI Generator</h1>
       
       <div className="mb-6">
         <textarea
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
           placeholder="Enter your prompt here, e.g., 'Create a semantic HTML structure for a hero section...'"
-          className="w-full h-32 p-4 bg-brand-dark border border-brand-light rounded-lg text-brand-text focus:ring-2 focus:ring-brand-accent focus:border-transparent transition"
+          className="w-full h-32 p-4 bg-gray-900 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
         />
       </div>
 
@@ -70,7 +71,7 @@ const AI_Interaction = () => {
         <button
           onClick={handleGenerate}
           disabled={isLoading}
-          className="bg-brand-accent hover:opacity-90 text-white font-bold py-3 px-8 rounded-lg disabled:bg-brand-gray disabled:cursor-not-allowed transition duration-300 ease-in-out flex items-center justify-center w-48 mx-auto"
+          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg disabled:bg-gray-600 disabled:cursor-not-allowed transition duration-300 ease-in-out flex items-center justify-center w-48 mx-auto"
         >
           {isLoading ? (
             <>
@@ -87,10 +88,10 @@ const AI_Interaction = () => {
       </div>
 
       {generatedCode && (
-        <div className="bg-brand-dark border border-brand-light text-brand-text p-6 rounded-lg relative">
+        <div className="bg-gray-900 border border-gray-700 text-white p-6 rounded-lg relative">
           <div className="flex justify-between items-center mb-4">
             <h3 className="text-xl font-semibold">Generated Code:</h3>
-            <button onClick={handleCopy} className="bg-brand-light hover:bg-brand-gray text-white font-bold py-1 px-3 rounded-lg text-sm transition-colors">
+            <button onClick={handleCopy} className="bg-gray-700 hover:bg-gray-600 text-white font-bold py-1 px-3 rounded-lg text-sm transition-colors">
               Copy
             </button>
           </div>
